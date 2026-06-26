@@ -33,14 +33,15 @@ npm run lint      # oxlint
 
 ```
 src/
-  App.jsx         # all page sections live here as named components
-  i18n.js         # EN/FR copy — all user-facing text lives here
-  index.css       # all styles — custom CSS, no framework
-  useReveal.js    # IntersectionObserver hook: adds .visible class on scroll-in
+  App.jsx          # all page sections + nav + fullscreen menu
+  ArticlePage.jsx  # case study article page (real estate quiz)
+  i18n.js          # EN/FR copy — all user-facing text lives here
+  index.css        # all styles — custom CSS, no framework
+  useReveal.js     # IntersectionObserver hook: adds .visible class on scroll-in
   ScrollExpand.jsx # scroll-driven scale animation (0.88 → 1.05)
-  main.jsx        # React root
+  main.jsx         # React root
 public/
-  404.html        # GitHub Pages SPA redirect hack (preserves deep links)
+  404.html         # GitHub Pages SPA redirect hack (preserves deep links)
 ```
 
 ## Architecture conventions
@@ -68,14 +69,18 @@ Auto-deploys to GitHub Pages on every merge to `main` via `.github/workflows/dep
 - `CNAME` lives in `/public/` so Vite copies it into the build output automatically
 - Pages source must be set to **GitHub Actions** in repo Settings → Pages
 
-**Branch workflow — strictly no direct pushes to `main`:**
-1. Create a branch: `git checkout -b your-branch-name`
-2. Make changes and commit on that branch
-3. Push the branch and open a PR
-4. PR Actions build must pass (green) before merging
-5. Edgar merges the PR → triggers auto-deploy to edgarramos.com
+**Issue-driven workflow — every change starts with a GitHub issue:**
+1. Edgar creates an issue (feature or bug template) with the full spec
+2. Edgar shares the issue URL in a new Claude Code session
+3. Claude reads the issue, asks one question max if something is unclear
+4. Claude creates a branch, does the work, opens a PR, and comments the PR link on the issue
+5. Edgar reviews and merges → auto-deploys to edgarramos.com
+6. Claude closes the issue
 
-Claude must always follow this flow. Never push to `main` directly, even for small fixes.
+**Branch workflow — strictly no direct pushes to `main`:**
+- Branch naming: `feat/short-description` for features, `fix/short-description` for bugs
+- Never commit to `main` directly, even for small fixes
+- PR Actions build must be green before merging
 
 **Domain:** `edgarramos.com` — currently DNS managed on Squarespace, plan to move to Cloudflare later. No changes needed to this repo for that migration.
 
