@@ -1,5 +1,15 @@
 # CLAUDE.md — chiknwingsnfrenchfries (edgarramos.com)
 
+## About Edgar
+
+Marketing automation specialist based in Montréal, QC. Works with Martech stacks — email flows, SMS/RCS, WhatsApp, CDPs, CRMs. Runs a YouTube channel called Flows & Funnels. Limited coding experience; not a developer. Just getting started with git and GitHub.
+
+**How to work with Edgar:**
+- Plain language only — no jargon, no walls of text
+- Shortest solution that works, no over-engineering
+- One question at a time when clarification is needed
+- Short responses — no need to recap what was just done
+
 Edgar's personal bio/portfolio site. Single-page React app deployed to `edgarramos.com` via GitHub Pages.
 
 ## Stack
