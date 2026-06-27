@@ -335,6 +335,9 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--rule);
   border-radius: 12px;
   background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .project-emoji { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
 .project-name {

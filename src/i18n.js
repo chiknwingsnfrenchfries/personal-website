@@ -16,7 +16,7 @@ export const i18n = {
     linksLabel: 'Work with me',
     links: [
       { icon: '▶️', title: 'Watch My Vlog', sub: 'Flows & Funnels on YouTube', href: 'https://www.youtube.com/@FlowsandFunnels', yt: true },
-      { icon: '🗂️', title: 'Portfolio', sub: 'Flows, CDP setups & campaigns', href: '#' },
+      { icon: '🗂️', title: 'Projects', sub: 'Flows, CDP setups & campaigns', href: '#' },
       { icon: '📞', title: '20 Min Call — Book Now', sub: "Let's talk automation strategy", href: 'https://calendly.com/YOURLINK', featured: true },
       { icon: '✉️', title: 'Shoot Me an Email', sub: 'Hello@edgarramos.com', href: 'mailto:Hello@edgarramos.com' },
     ],
@@ -62,7 +62,7 @@ export const i18n = {
     linksLabel: 'Travailler ensemble',
     links: [
       { icon: '▶️', title: 'Regarder mon Vlog', sub: 'Flows & Funnels sur YouTube', href: 'https://www.youtube.com/@FlowsandFunnels', yt: true },
-      { icon: '🗂️', title: 'Portfolio', sub: 'Flows, CDP et campagnes réalisés', href: '#' },
+      { icon: '🗂️', title: 'Projets', sub: 'Flows, CDP et campagnes réalisés', href: '#' },
       { icon: '📞', title: 'Appel 20 min — Réserver', sub: 'Parlons stratégie d\'automatisation', href: 'https://calendly.com/YOURLINK', featured: true },
       { icon: '✉️', title: 'Envoyez-moi un courriel', sub: 'Hello@edgarramos.com', href: 'mailto:Hello@edgarramos.com' },
     ],
