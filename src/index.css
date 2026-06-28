@@ -329,17 +329,27 @@ img { display: block; max-width: 100%; }
 /* Project card */
 .project-card {
   display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 20px;
+  flex-direction: column;
+  overflow: hidden;
   border: 1px solid var(--rule);
   border-radius: 12px;
-  background: var(--surface);
+  background: #fff;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
 }
-.project-emoji { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.project-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+.project-card-visual {
+  width: 100%;
+  padding: 40px 20px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-emoji { font-size: 44px; }
+.project-card-body { padding: 20px; }
 .project-name {
   font-family: var(--font-display);
   font-size: 18px;
@@ -348,7 +358,12 @@ img { display: block; max-width: 100%; }
   line-height: 1.2;
   margin-bottom: 4px;
 }
-.project-desc { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.project-desc { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+.project-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .project-badge {
   font-family: var(--font-mono);
   font-size: 8px;
@@ -360,6 +375,12 @@ img { display: block; max-width: 100%; }
   border-radius: 100px;
   display: inline-block;
 }
+.project-card-arrow {
+  font-size: 16px;
+  color: var(--muted);
+  transition: transform 0.2s, color 0.2s;
+}
+.project-card:hover .project-card-arrow { transform: translate(3px, -3px); color: var(--accent); }
 
 /* Book cards */
 .book-list { display: flex; flex-direction: column; gap: 12px; }
@@ -367,12 +388,12 @@ img { display: block; max-width: 100%; }
   display: flex;
   gap: 14px;
   align-items: center;
-  padding: 14px;
+  padding: 16px;
   border: 1px solid var(--rule);
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none;
   color: var(--ink);
-  background: var(--surface);
+  background: #fff;
   transition: border-color 0.2s;
 }
 .book-card:hover { border-color: var(--ink); }
@@ -455,9 +476,9 @@ img { display: block; max-width: 100%; }
   display: block;
   width: 100%;
   text-align: left;
-  background: var(--surface);
+  background: #fff;
   border: 1px solid var(--rule);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 24px;
   cursor: pointer;
   transition: border-color 0.2s, transform 0.2s;

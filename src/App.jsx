@@ -222,11 +222,16 @@ function AboutMe({ t }) {
           <span className="about-label">{t.projectLabel}</span>
           <ScrollExpand>
             <a ref={projectRef} className="project-card reveal" href="https://edgarramos.com/en/projects/real-estate-quiz" target="_blank" rel="noopener noreferrer">
-              <div className="project-emoji">🏡</div>
-              <div>
+              <div className="project-card-visual">
+                <span className="project-emoji">🏡</span>
+              </div>
+              <div className="project-card-body">
                 <div className="project-name">Real estate quiz</div>
                 <div className="project-desc">Your best neighbourhood match — Greater Montréal</div>
-                <span className="project-badge">{t.projectStatus}</span>
+                <div className="project-card-footer">
+                  <span className="project-badge">{t.projectStatus}</span>
+                  <span className="project-card-arrow">↗</span>
+                </div>
               </div>
             </a>
           </ScrollExpand>
