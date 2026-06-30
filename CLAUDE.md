@@ -82,6 +82,11 @@ Auto-deploys to GitHub Pages on every merge to `main` via `.github/workflows/dep
 - Never commit to `main` directly, even for small fixes
 - PR Actions build must be green before merging
 
+**PR previews via Cloudflare Workers** (`.github/workflows/preview.yml`):
+- Every PR triggers an automatic preview deployment to Cloudflare Workers
+- The Cloudflare bot posts the preview URL as a comment on the PR
+- After creating a PR, always fetch that comment and share the Branch Preview URL directly in the session conversation
+
 **Domain:** `edgarramos.com` — currently DNS managed on Squarespace, plan to move to Cloudflare later. No changes needed to this repo for that migration.
 
 ## Pending / known placeholders
