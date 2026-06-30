@@ -223,7 +223,7 @@ function AboutMe({ t }) {
           <ScrollExpand>
             <a ref={projectRef} className="project-card reveal" href="https://edgarramos.com/en/projects/real-estate-quiz" target="_blank" rel="noopener noreferrer">
               <div className="project-card-visual">
-                <span className="project-emoji">🏡</span>
+                <img src="/real-estate-quiz-header.png" alt="Real estate quiz & CDP data pipeline" className="project-card-img" />
               </div>
               <div className="project-card-body">
                 <div className="project-name">Real estate quiz</div>
